@@ -12,9 +12,10 @@ pipeline = load('assets/pipeline.joblib')
 url = "https://raw.githubusercontent.com/strangelycutlemon/camera_prices/master/modified_camera_prices.csv"
 df = pd.read_csv(url)
 
+style = {'padding': '1.5em'}
+
 column1 = dbc.Col(
     [
-        dcc.Markdown('## Camera Features', className='mb-5'),
         dcc.Markdown('#### Brand'),
         dcc.Dropdown(
             id='Brand',
@@ -143,6 +144,13 @@ def predict(Release_date, Max_resolution, Low_resolution, Effective_pixels, Zoom
 
 column2 = dbc.Col(
     [
+        html.Div([
+            dcc.Markdown("""
+
+
+
+            """),
+        ]),
         dcc.Markdown('#### Effective MegaPixels'),
         dcc.Slider(
             id='Effective_pixels',
@@ -212,8 +220,30 @@ column3 = dbc.Col(
         html.Div(id='out', className='lead'),
         # dcc.Input(id='out', value='initial value', type='text')
         # html.Td(test_text)
+        html.Div("This model's predictions are off by $220 on average."),
+        html.Div("Given these data, the model is able to predict about 60% of the variation in price. ")
     ]
 )
 
+toprow = dbc.Row(
+    [
+        html.Div([
+            dcc.Markdown("""
+            ## Camera Features
 
-layout = dbc.Row([column1, column2, column3])
+            Use the controls below to predict the price of a camera from a set of features.
+
+            """),
+        ], style=style),
+    ]
+)
+row2 = dbc.Row(
+    [
+        # dcc.Markdown('## Camera Features'),
+        column1,
+        column2,
+        column3
+    ]
+)
+
+layout = dbc.Row([toprow, row2])
