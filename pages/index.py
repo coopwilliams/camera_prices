@@ -43,7 +43,7 @@ column1 = dbc.Col(
     md=4,
 )
 
-url = "https://raw.githubusercontent.com/strangelycutlemon/camera_prices/master/cameras.csv"
+url = "https://raw.githubusercontent.com/strangelycutlemon/camera_prices/master/modified_camera_prices.csv"
 df = pd.read_csv(url)
 fig = px.box(df, x='Brand', y='Price',
             #  color='Effective_pixels',
