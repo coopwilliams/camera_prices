@@ -42,9 +42,13 @@ column1 = dbc.Col(
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+url = "https://raw.githubusercontent.com/strangelycutlemon/camera_prices/master/cameras.csv"
+gapminder = pd.read_csv(url)
+fig = px.box(df, x='Brand', y='Price',
+            #  color='Effective_pixels',
+            #  notched=True,
+             title ='Price by Digital Camera Brand',
+             points='all')
 
 column2 = dbc.Col(
     [
