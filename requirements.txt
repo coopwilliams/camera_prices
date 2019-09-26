@@ -1,6 +1,6 @@
-dash
-dash-bootstrap-components
-pandas
-joblib
-plotly
-flask
+dash==1.2.0
+dash-bootstrap-components==0.7.1
+pandas==0.23.4
+joblib==0.13.2
+plotly==4.1.1
+flask==1.1.1

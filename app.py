@@ -49,13 +49,7 @@ external_stylesheets = [
     'https://use.fontawesome.com/releases/v5.9.0/css/all.css', # for social media icons
 ]
 
-# app = dash.Dash(__name__)
-# server = app.server
-#
-# @server.route('/favicon.ico')
-# def favicon():
-#     return flask.send_from_directory(os.path.join(server.root_path, 'static'),
-#                                      'favicon.png')
+
 meta_tags=[
     {'name': 'viewport', 'content': 'width=device-width, initial-scale=1'}
 ]
