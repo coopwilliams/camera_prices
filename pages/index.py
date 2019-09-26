@@ -44,7 +44,7 @@ column1 = dbc.Col(
 )
 
 url = "https://raw.githubusercontent.com/strangelycutlemon/camera_prices/master/cameras.csv"
-gapminder = pd.read_csv(url)
+df = pd.read_csv(url)
 fig = px.box(df, x='Brand', y='Price',
             #  color='Effective_pixels',
             #  notched=True,
