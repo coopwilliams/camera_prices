@@ -4,6 +4,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
+import pandas as pd
 
 from app import app
 
@@ -31,7 +32,7 @@ column1 = dbc.Col(
 
             ## Understanding the Cost of Digital Camera Features
 
-            This tool is an interactive predictive built using the features of over 1,000 digital cameras released from 1994 to 2007 (the year the iPhone was released).
+            This tool is an interactive predictive model built using the features of over 1,000 digital cameras released from 1994 to 2007 (the year the iPhone was released).
             With it, you can estimate the cost of a camera from that time period with any features you specify.
             While it won't help you choose a digital camera today, it does illustrate which features were most costly during the heyday of digital cameras.
 
