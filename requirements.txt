@@ -6,3 +6,4 @@ plotly==4.1.1
 flask==1.1.1
 gunicorn
 sklearn
+category_encoders==2.0.0
